@@ -1,6 +1,3 @@
-// Webpack just bundles this in, no problem - but typcially module imports don't work with CSS
-import '../../component/App.css';
-
 import CalcDisplay from '../calcdisplay/calcdisplay.js';
 import CalcButtonPanel from '../calcbuttonpanel/calcbuttonpanel.js';
 import CalcButton from '../calcbutton/calcbutton.js';
@@ -18,10 +15,18 @@ export default class CalcApp extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-                <calc-display></calc-display>
-                <calc-buttonpanel></calc-buttonpanel>`;
+                <calc-display class="component-display"></calc-display>
+                <calc-buttonpanel class="component-button-panel"></calc-buttonpanel>
+                
+                <style>
+                    .component-app {
+                      display: flex;
+                      flex-direction: column;;
+                      flex-wrap: wrap;
+                      height: 100%;
+                    }
+                </style>`;
 
-        this.classList.add('component-app');
         this.dom = {
             buttonpanel: this.querySelector('calc-buttonpanel'),
             display: this.querySelector('calc-display')

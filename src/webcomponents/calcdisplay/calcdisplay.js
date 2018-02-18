@@ -2,10 +2,6 @@
 import '../../component/Display.css';
 
 export default class CalcDisplay extends HTMLElement {
-    constructor() {
-        super();
-    }
-
     set value(val) {
         this.dom.displayText.innerText = val;
     }
@@ -14,8 +10,7 @@ export default class CalcDisplay extends HTMLElement {
         this.innerHTML = '<div class="display-text">0</div>';
         this.dom = {
             displayText: this.querySelector('.display-text')
-        }
-        this.classList.add('component-display');
+        };
     }
 }
 
