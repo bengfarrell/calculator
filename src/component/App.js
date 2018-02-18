@@ -1,6 +1,8 @@
 import React from 'react';
 import Display from './Display';
-import ButtonPanel from './ButtonPanel';
+//import ButtonPanel from './ButtonPanel';
+import CalcButtonPanel from '../webcomponents/calcbuttonpanel/calcbuttonpanel.js';
+import CalcButton from '../webcomponents/calcbutton/calcbutton.js';
 import calculate from '../logic/calculate';
 import './App.css';
 
@@ -13,6 +15,9 @@ class App extends React.Component {
       operation: null,
     };
   }
+    componentDidMount() {
+        this.buttonPanelEl.addEventListener(CalcButton.CALC_BUTTON_PRESS, e => this.handleClick(e.detail.name));
+    }
 
   handleClick = (buttonName) => {
     this.setState(calculate(this.state, buttonName));
@@ -24,9 +29,7 @@ class App extends React.Component {
         <Display
           value={this.state.next || this.state.total || '0'}
         />
-        <ButtonPanel
-          clickHandler={this.handleClick}
-        />
+        <calc-buttonpanel ref={(el) => { this.buttonPanelEl = el; }} />
       </div>
     );
   }
