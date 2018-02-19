@@ -1,5 +1,5 @@
-import operate from './operate';
-import isNumber from './isNumber';
+import operate from './operate.js';
+import isNumber from './isNumber.js';
 
 /**
  * Given a button name and a calculator data object, return an updated
