@@ -15,11 +15,11 @@ export default class CalcApp extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-                <calc-display class="component-display"></calc-display>
-                <calc-buttonpanel class="component-button-panel"></calc-buttonpanel>
+                <calc-display></calc-display>
+                <calc-buttonpanel></calc-buttonpanel>
                 
                 <style>
-                    .component-app {
+                    calc-app {
                       display: flex;
                       flex-direction: column;;
                       flex-wrap: wrap;

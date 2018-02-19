@@ -4,37 +4,37 @@ export default class CalcButtonPanel extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
                 <div>
-                  <calc-button name="AC" class="component-button"></calc-button>
-                  <calc-button name="+/-" class="component-button"></calc-button>
-                  <calc-button name="%" class="component-button"></calc-button>
-                  <calc-button name="÷" class="component-button orange"></calc-button>
+                  <calc-button name="AC"></calc-button>
+                  <calc-button name="+/-"></calc-button>
+                  <calc-button name="%"></calc-button>
+                  <calc-button name="÷" class="orange"></calc-button>
                 </div>
                 <div>
-                  <calc-button name="7" class="component-button"></calc-button>
-                  <calc-button name="8" class="component-button"></calc-button>
-                  <calc-button name="9" class="component-button"></calc-button>
-                  <calc-button name="x" class="component-button orange"></calc-button>
+                  <calc-button name="7"></calc-button>
+                  <calc-button name="8"></calc-button>
+                  <calc-button name="9"></calc-button>
+                  <calc-button name="x" class="orange"></calc-button>
                 </div>
                 <div>
-                  <calc-button name="4" class="component-button"></calc-button>
-                  <calc-button name="5" class="component-button"></calc-button>
-                  <calc-button name="6" class="component-button"></calc-button>
-                  <calc-button name="-" class="component-button orange"></calc-button>
+                  <calc-button name="4"></calc-button>
+                  <calc-button name="5"></calc-button>
+                  <calc-button name="6"></calc-button>
+                  <calc-button name="-" class="orange"></calc-button>
                 </div>
                 <div>
-                  <calc-button name="1" class="component-button"></calc-button>
-                  <calc-button name="2" class="component-button"></calc-button>
-                  <calc-button name="3" class="component-button"></calc-button>
-                  <calc-button name="+" class="component-button orange"></calc-button>
+                  <calc-button name="1"></calc-button>
+                  <calc-button name="2"></calc-button>
+                  <calc-button name="3"></calc-button>
+                  <calc-button name="+" class="orange"></calc-button>
                 </div>
                 <div>
-                  <calc-button name="0" class="component-button wide"></calc-button>
-                  <calc-button name="." class="component-button"></calc-button>
-                  <calc-button name="=" class="component-button orange"></calc-button>
+                  <calc-button name="0" class="wide"></calc-button>
+                  <calc-button name="."></calc-button>
+                  <calc-button name="=" class="orange"></calc-button>
                 </div>
                 
                 <style>
-                    .component-button-panel {
+                    calc-buttonpanel {
                       background-color: #858694;
                       display: flex;
                       flex-direction: row;
@@ -42,7 +42,7 @@ export default class CalcButtonPanel extends HTMLElement {
                       flex: 1 0 auto;
                     }
                     
-                    .component-button-panel > div {
+                    calc-buttonpanel > div {
                       width: 100%;
                       margin-bottom: 1px;
                       flex: 1 0 auto;
